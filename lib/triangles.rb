@@ -32,4 +32,7 @@ class Triangle
     end
   end
 
+  # def no_triangle
+  #   if @side1 + @side2 <= @side3
+
 end
