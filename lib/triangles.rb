@@ -1,42 +1,21 @@
+
 class Triangle
   def initialize(side1, side2, side3)
     @side1 = side1
     @side2 = side2
     @side3 = side3
   end
+
 #Sum of two sides is greater than the third side
-  def equilateral_checker?
-    # side1 = 3
-    # side2 = 5
-    # side3 = 10
-    if @side1 == @side2 && @side2 == @side3
-      return true
+  def test_triangle
+    if @side1.eql?(@side2) && @side2.eql?(@side3)
+      "It's an equilateral"
+    elsif @side1.eql?(@side2) || @side2.eql?(@side3)
+      "It's an isosceles"
+    elsif @side1.eql?(@side2) == false && @side2.eql?(@side3) == false
+      "It's a scalene triangle"
     else
-      return false
-    end
-  end
-
-  def isosceles_checker?
-    if @side1 == @side2 || @side2 == @side3 || @side3 == @side1
-      true
-    else
-      false
-    end
-  end
-
-  def scalene_checker?
-    if @side1 != @side2 && @side3 != @side1
-      true
-    else
-      false
-    end
-  end
-
-  def no_triangle
-    if @side1 + @side2 <= @side3 || @side2 + @side3 <= @side1 || @side3 + @side2 = @side1
-      false
-    else
-      true
+      "Not a triangle"
     end
   end
 end
