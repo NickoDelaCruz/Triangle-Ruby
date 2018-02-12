@@ -14,4 +14,9 @@ describe(Triangle) do
     test_triangle = Triangle.new(5,5,2)
     expect(test_triangle.isosceles_checker?()).to(eq(true))
   end
+  describe('scalene_check')
+  it('passes if no sides are equal') do
+    test_triangle = Triangle.new(2,5,8)
+    expect(test_triangle.scalene_checker?()).to(eq(true))
+  end
 end
